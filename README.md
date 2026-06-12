@@ -66,21 +66,6 @@ Frontend: HTML, CSS, JavaScript, @stellar/freighter-api
 
 Wallet: Freighter Browser Extension (Testnet)
 
----
-
-## Contract Detail
-
-**ID:** `CCL7RRR73KERUIJLWBUXAAG575M2M3ILY2H3WO7WB4IVO3OXFE32E2GA`
-
-**Explorer:** [View on Stellar Expert](https://stellar.expert/explorer/testnet/contract/CCL7RRR73KERUIJLWBUXAAG575M2M3ILY2H3WO7WB4IVO3OXFE32E2GA?filter=history)
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/stellar/freighter/master/docs/static/images/logo.png" alt="Stellar Expert Contract" width="100%" style="border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 1px solid #e1e4e8; margin-top: 10px;" />
-  <br/>
-  <em><small>Thay đường dẫn ảnh thật của bạn vào thuộc tính src="" ở trên</small></em>
-</p>
-
----
 
 # Contract Methods
 
@@ -270,5 +255,15 @@ Skills: Rust, Soroban SDK, Stellar Blockchain, Node.js, JavaScript, Express.js, 
 Bootcamp: Rise In x Stellar University Tour — Vietnam
 
 License: MIT License
-<img width="1679" height="837" alt="image" src="https://github.com/user-attachments/assets/2e45737c-4981-4523-9a08-eff0cf756d1b" />
+---
 
+## Contract Detail
+
+**ID:** `CCL7RRR73KERUIJLWBUXAAG575M2M3ILY2H3WO7WB4IVO3OXFE32E2GA`
+
+**Explorer:** [View on Stellar Expert](https://stellar.expert/explorer/testnet/contract/CCL7RRR73KERUIJLWBUXAAG575M2M3ILY2H3WO7WB4IVO3OXFE32E2GA?filter=history)
+
+<img width="1917" height="839" alt="image" src="https://github.com/user-attachments/assets/2e43a025-3385-4e3e-ad7b-779b96ba89e1" />
+
+
+---
