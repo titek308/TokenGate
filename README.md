@@ -2,6 +2,8 @@
 
 Pay-Per-Use API Gate — Token-Gated API Monetization on Stellar
 
+---
+
 # Description
 
 Pay-Per-Use API Gate is a decentralized application built on the Stellar blockchain using Soroban smart contracts. It enables API developers to monetize their services through a token-gated access model, where users must hold and spend GATE tokens to consume API endpoints. Unlike traditional payment processors such as Stripe or PayPal that impose minimum transaction fees making micro-payments economically unviable, this system leverages Stellar's near-zero transaction cost (approximately $0.00001 per operation) to make per-request billing practical at any scale.
@@ -10,9 +12,13 @@ The core mechanism is a single Soroban smart contract that serves two roles simu
 
 The project is structured as a three-layer system: a Soroban Rust smart contract handling all on-chain state, a Node.js Express backend that signs and submits consume_token transactions on behalf of the developer, and an HTML/CSS/JavaScript frontend that allows users to connect their Freighter wallet, purchase GATE tokens, and interact with available API endpoints.
 
+---
+
 # Project Vision
 
 The vision of Pay-Per-Use API Gate is to become a foundational payment primitive for the decentralized API economy. The goal is to allow any developer anywhere in the world to publish an API endpoint and receive real-time per-request revenue in XLM, with no bank account, no payment processor approval, and no monthly minimums. By making micro-payment billing economically viable through Stellar's infrastructure, this project opens API monetization to markets and use cases that are entirely inaccessible under the traditional subscription or flat-fee billing model.
+
+---
 
 # Features
 
@@ -48,6 +54,8 @@ The backend (backend/src/stellar.js) implements the complete Soroban transaction
 
 The contract includes 14 unit tests using Soroban's built-in test environment covering: double initialization guard, minimum purchase enforcement, multi-deposit accumulation, token transfer between wallets, consume with default and custom endpoint pricing, consume without approval, insufficient balance rejection, revenue withdrawal, zero revenue rejection, and a complete end-to-end flow from token purchase through revenue withdrawal.
 
+---
+
 # Tech Stack
 
 Smart Contract: Rust, Soroban SDK 20.0, deployed on Stellar Testnet
@@ -58,13 +66,21 @@ Frontend: HTML, CSS, JavaScript, @stellar/freighter-api
 
 Wallet: Freighter Browser Extension (Testnet)
 
-# Contract
+---
 
-Contract ID: CCL7RRR73KERUIJLWBUXAAG575M2M3ILY2H3WO7WB4IVO3OXFE32E2GA
+## Contract Detail
 
-Contract Explorer: https://stellar.expert/explorer/testnet/contract/CCL7RRR73KERUIJLWBUXAAG575M2M3ILY2H3WO7WB4IVO3OXFE32E2GA?filter=history
+**ID:** `CCL7RRR73KERUIJLWBUXAAG575M2M3ILY2H3WO7WB4IVO3OXFE32E2GA`
 
-*Contract screenshot to be attached after deployment*
+**Explorer:** [View on Stellar Expert](https://stellar.expert/explorer/testnet/contract/CCL7RRR73KERUIJLWBUXAAG575M2M3ILY2H3WO7WB4IVO3OXFE32E2GA?filter=history)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/stellar/freighter/master/docs/static/images/logo.png" alt="Stellar Expert Contract" width="100%" style="border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 1px solid #e1e4e8; margin-top: 10px;" />
+  <br/>
+  <em><small>Thay đường dẫn ảnh thật của bạn vào thuộc tính src="" ở trên</small></em>
+</p>
+
+---
 
 # Contract Methods
 
@@ -118,6 +134,8 @@ Read-only. Returns the configured GATE token cost for a named API endpoint. Retu
 
 Read-only. Returns the accumulated XLM revenue in stroops for a given developer address. Divide by 10,000,000 to convert to XLM denomination.
 
+---
+
 # Backend API Endpoints
 
 GET /balance/:address — Returns the current GATE token balance of a Stellar wallet address without spending any gas.
@@ -129,6 +147,8 @@ POST /api/ai-text — Accepts userAddress and prompt. Deducts 5 GATE tokens (pre
 GET /dev/revenue — Returns the developer's current accumulated XLM revenue in both stroops and XLM denomination.
 
 POST /dev/withdraw — Triggers a withdraw_revenue transaction on the Stellar contract, transferring all accumulated XLM to the developer's wallet.
+
+---
 
 # Project Structure
 
@@ -147,6 +167,8 @@ backend/src/index.js — Express REST API server
 backend/.env.example — Environment variable template
 
 frontend/src/App.jsx — React Frontend with Cyberpunk/Web3 Dark Mode UI, Freighter wallet integration, and real-time transaction terminal.
+
+---
 
 # How to Run
 
@@ -180,6 +202,8 @@ npm install
 npm run dev
 ```
 The web app will be available at `http://localhost:5173`. Connect your Freighter wallet to interact.
+
+---
 
 # Future Scopes
 
@@ -215,6 +239,8 @@ Issue a non-fungible Soroban token (soul-bound) as an API key credential tied to
 
 Deploy the contract as an internal billing system for large organizations running microservice architectures. Each internal team pre-loads a quarterly GATE token budget; the central API platform charges per call. All usage is recorded immutably on Stellar, replacing spreadsheet-based billing reconciliation with transparent on-chain accounting.
 
+---
+
 # Expansion Ideas
 
 The Pay-Per-Use API Gate architecture is a general-purpose billing primitive applicable across many industries. The core pattern — deposit XLM, receive tokens, spend tokens per action, developer withdraws XLM — can be adopted directly or with minor modifications in the following contexts.
@@ -230,6 +256,8 @@ The Pay-Per-Use API Gate architecture is a general-purpose billing primitive app
 **Freelance Compute Marketplaces:** Developers offering rendering, data transformation, or batch processing jobs can replace informal payment agreements with this contract, where clients pre-fund with tokens and the backend charges per completed job unit.
 
 **Web3 Game Economies:** Browser games requiring server-side computation per player action can charge GATE tokens for AI opponent responses, procedural content generation, or loot drop calculations, funding backend costs directly from player spending.
+
+---
 
 # Profile
 
