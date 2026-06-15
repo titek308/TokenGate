@@ -264,6 +264,8 @@ License: MIT License
 **Explorer:** [View on Stellar Expert](https://stellar.expert/explorer/testnet/contract/CCL7RRR73KERUIJLWBUXAAG575M2M3ILY2H3WO7WB4IVO3OXFE32E2GA?filter=history)
 
 <img width="1917" height="839" alt="image" src="https://github.com/user-attachments/assets/2e43a025-3385-4e3e-ad7b-779b96ba89e1" />
+<img width="1920" height="907" alt="image" src="https://github.com/user-attachments/assets/f5d47a38-e993-458c-a74b-f4605aae5b07" />
+
 
 
 ---
